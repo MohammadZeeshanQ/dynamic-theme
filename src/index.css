@@ -1,7 +1,8 @@
 :root {
 	--background: #2c3e50;
 	--buttonHover: #5d6d7e;
-	--textColor: #fcfcfc;
+	--lightTextColor: #fcfcfc;
+	--darkTextColor: #c0c0c0;
 }
 
 * {
