@@ -22,7 +22,7 @@ export default function NavBar({ nightMode, setNightMode }) {
 	useEffect(() => {}, [nightMode]);
 
 	// styled
-	const Wrapper = styled.div`
+	const Wrapper = styled.nav`
 		display: flex;
 		align-items: center;
 		width: 88%;
@@ -96,9 +96,9 @@ export default function NavBar({ nightMode, setNightMode }) {
 						</MenuWrapper>
 						<ModeWrapper onClick={nightModeHandler}>
 							{nightMode ? (
-								<DarkModeIcon sx={{ fontSize: "1.6rem", color: "var(--buttonHover)" }} />
-							) : (
 								<WbSunnyIcon sx={{ fontSize: "1.6rem", color: "var(--buttonHover)" }} />
+							) : (
+								<DarkModeIcon sx={{ fontSize: "1.6rem", color: "var(--buttonHover)" }} />
 							)}
 						</ModeWrapper>
 					</MobileWrapper>

@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
+// components
+import NameComponent from "./NameComponent.js";
+
 export default function Index() {
+	// variables
+	const [name, setName] = useState("");
+
+	useEffect(() => {}, [name]);
+
+	// style components
 	const Container = styled.section`
 		border: 1px #fff solid;
 		margin-top: 7rem;
@@ -15,26 +24,10 @@ export default function Index() {
 		text-align: center;
 	`;
 
-	const HeaderText = styled.h1`
-		font: 3rem Poppins;
-		font-weight: 400;
-		color: var(--darkTextColor);
-		letter-spacing: 1px;
-	`;
-
-	const HeaderTextSpan = styled.span`
-		font-weight: 600;
-		color: var(--lightTextColor);
-	`;
-
 	return (
 		<Container>
 			<Wrapper>
-				<HeaderWrapper>
-					<HeaderText>
-						Your Name: <HeaderTextSpan>Zeeshan</HeaderTextSpan>
-					</HeaderText>
-				</HeaderWrapper>
+				<NameComponent name={name} setName={setName} />
 			</Wrapper>
 		</Container>
 	);
