@@ -20,9 +20,13 @@ export default function NameComponent({ name, setName }) {
 	};
 
 	// display Modal for name input
+	// fix this side for Modal
 	const nameHandler = (event) => {
+		event.preventDefault();
 		setName(event.target.value);
 	};
+
+	useEffect(() => {}, []);
 
 	// styled components
 	const Container = styled.section``;
@@ -88,13 +92,11 @@ export default function NameComponent({ name, setName }) {
 					<DialogTitle>Enter your name:</DialogTitle>
 					<DialogContent>
 						<ModalWrapper>
-							<InputName type='text' placeholder='Name' />
+							<InputName type='text' placeholder='Name' onChange={nameHandler} />
 						</ModalWrapper>
 					</DialogContent>
 					<DialogActions>
-						<SubmitBtn type='submit' onClick={nameHandler}>
-							Submit
-						</SubmitBtn>
+						<SubmitBtn>Submit</SubmitBtn>
 					</DialogActions>
 				</Dialog>
 			</Wrapper>

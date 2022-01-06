@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // components
 import NameComponent from "./NameComponent.js";
+import ButtonComponent from "../components/ButtonComponent.js";
 
 export default function Index() {
 	// variables
@@ -28,6 +29,7 @@ export default function Index() {
 		<Container>
 			<Wrapper>
 				<NameComponent name={name} setName={setName} />
+				<ButtonComponent />
 			</Wrapper>
 		</Container>
 	);
